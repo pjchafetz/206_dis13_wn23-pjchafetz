@@ -53,12 +53,28 @@ def job_and_hire_date(cur, conn):
 # TASK 3: IDENTIFY PROBLEMATIC SALARY DATA
 # Apply JOIN clause to match individual employees
 def problematic_salary(cur, conn):
-    pass
+    cur.execute("""SELECT first_name, last_name FROM Employees
+                JOIN Jobs ON Employees.job_id = Jobs.job_id
+                WHERE salary < Jobs.min_salary OR salary > Jobs.max_salary
+                """)
+    return cur.fetchall()
 
 
 # TASK 4: VISUALIZATION
 def visualization_salary_data(cur, conn):
-    pass
+    cur.execute("""SELECT Jobs.job_title, salary FROM Employees
+                JOIN Jobs ON Employees.job_id = Jobs.job_id
+                """)
+    xs, ys = zip(*cur.fetchall())
+    cur.execute("SELECT job_title, min_salary, max_salary FROM Jobs")
+    jobs, min_sals, max_sals = zip(*cur.fetchall())
+    
+    plt.figure(figsize=(10, 5))
+    plt.xticks(rotation=45)
+    plt.scatter(xs, ys)
+    plt.scatter(jobs, min_sals, color='red', marker='x')
+    plt.scatter(jobs, max_sals, color='red', marker='x')
+    plt.show()
 
 
 class TestDiscussion12(unittest.TestCase):
@@ -90,12 +106,19 @@ def main():
     cur, conn = setUpDatabase('HR.db')
     create_employee_table(cur, conn)
 
+    # ADD EMPLOYEES
     add_employee("employee.json", cur, conn)
 
-    job_and_hire_date(cur, conn)
+    # GET FIRST JOB AND HIRE DATE
+    dates = job_and_hire_date(cur, conn)
+    print("Job for earliest hire date:", dates)
 
+    # IDENTIFY PROBLEMATIC SALARIES
     wrong_salary = (problematic_salary(cur, conn))
-    print(wrong_salary)
+    print("Employees with problematic salaries:\n", wrong_salary)
+    
+    # VISUALIZE SALARY DATA
+    visualization_salary_data(cur, conn)
 
 
 if __name__ == "__main__":
