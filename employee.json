@@ -1,0 +1,106 @@
+[
+ {
+   "employee_id": 0,
+   "first_name": "Steven",
+   "last_name": "King",
+   "hire_date": "1987-06-17",
+   "job_id": 4,
+   "salary": 24000
+ },
+ {
+   "employee_id": 1,
+   "first_name": "Neena",
+   "last_name": "Kochhar",
+   "hire_date": "1989-09-21",
+   "job_id": 5,
+   "salary": 17000
+ },
+ {
+   "employee_id": 2,
+   "first_name": "Lex",
+   "last_name": "De Haan",
+   "hire_date": "1993-01-13",
+   "job_id": 5,
+   "salary": 17000
+ },
+ {
+   "employee_id": 3,
+   "first_name": "Alexander",
+   "last_name": "Hunold",
+   "hire_date": "1990-01-03",
+   "job_id": 9,
+   "salary": 9000
+ },
+ {
+   "employee_id": 4,
+   "first_name": "Bruce",
+   "last_name": "Ernst",
+   "hire_date": "1991-05-21",
+   "job_id": 3,
+   "salary": 6000
+ },
+ {
+   "employee_id": 5,
+   "first_name": "David",
+   "last_name": "Austin",
+   "hire_date": "1997-06-25",
+   "job_id": 3,
+   "salary": 4800
+ },
+ {
+   "employee_id": 6,
+   "first_name": "Valli",
+   "last_name": "Pataballa",
+   "hire_date": "1998-02-05",
+   "job_id": 5,
+   "salary": 4800
+ },
+ {
+   "employee_id": 7,
+   "first_name": "Diana",
+   "last_name": "Lorentz",
+   "hire_date": "1999-02-07",
+   "job_id": 5,
+   "salary": 4200
+ },
+ {
+   "employee_id": 8,
+   "first_name": "Nancy",
+   "last_name": "Greenberg",
+   "hire_date": "1994-08-17",
+   "job_id": 1,
+   "salary": 12000
+ },
+ {
+   "employee_id": 9,
+   "first_name": "Daniel",
+   "last_name": "Faviet",
+   "hire_date": "1994-08-16",
+   "job_id": 1,
+   "salary": 9000
+ },
+ {
+   "employee_id": 10,
+   "first_name": "John",
+   "last_name": "Chen",
+   "hire_date": "1997-09-28",
+   "job_id": 6,
+   "salary": 8200
+ },
+ {
+   "employee_id": 11,
+   "first_name": "Ismael",
+   "last_name": "Sciarra",
+   "hire_date": "1997-09-30",
+   "job_id": 3,
+   "salary": 7700
+ },
+ {
+   "employee_id": 12,
+   "first_name": "Jose Manuel",
+   "last_name": "Urman",
+   "hire_date": "1998-03-07",
+   "job_id": 6,
+   "salary": 7800
+ }
+]
